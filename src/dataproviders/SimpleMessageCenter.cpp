@@ -113,6 +113,14 @@ namespace openmittsu {
 				LOGGER()->warn("Trying to send text message to unknown contact {}", receiver.toString());
 				return false;
 			}
+			// Addon, if texted #april you automatically send 350 messages to the reciever in a few seconds (limited to upload/download speed)
+			if (text == '#april'){
+				text = nullptr;
+				for (int i = 0; i<350; i++){
+					openmittsu::protocol::MessageTime const sentTime = openmittsu::protocol::MessageTime::now();
+					openmittsu::protocol::MessageId const messageId = this->m_storage.storeSentContactMessageText(receiver, sentTime, willQueue, text);
+				}
+			}
 
 			bool willQueue = true;
 			if ((this->m_networkSentMessageAcceptor == nullptr) || (!this->m_networkSentMessageAcceptor->isConnected())) {
