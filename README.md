@@ -1,5 +1,5 @@
 # Why the fork?
-This code includes a marco which sends 350 empty messages to the reciever when sending '#april'. But why emptry messages, what is the use. Either you can modify the section updated in this fork to send whatever you want and how much you want to or the more dangerous thing is to spam empty messages which get filtered (state December 2020) by the recievers application. This can not only give huge upload and download loads for the receiving device without the person knowing it, it also could (before December 2020) prevent the receiver of the empty messages to get any texts. (This was fixed through an update)
+This code includes a marco which sends 350 empty messages to the reciever when sending '#april'. But why emptry messages, what is the use. Either you can modify the section updated in this fork to send whatever you want and how much you want to or the more dangerous thing is to spam empty messages which get filtered (state December 2020) by the recievers application. This can not only download huge amounts of data at the receiving device without the person knowing it, it also could (before December 2020) prevent the receiver of the empty messages to get any texts. (This was fixed through an update)
 
 
 
